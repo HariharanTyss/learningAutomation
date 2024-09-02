@@ -11,38 +11,55 @@ import com.myntrajio.generic.commonlibrary.BaseTest;
 @Listeners(com.myntrajio.generic.listenerlibrary.ListenerImplementation.class)
 
 public class RegisterTest extends BaseTest {
-	
-	
-	
+
 	@Test
-	public void registerValidData() 
-	{
-		
+	public void registerValidData() {
+		String name = excellibrary.readData("Registerdetails", 1, 0);
+		String email = excellibrary.readData("Registerdetails", 1, 1);
+		String Password = excellibrary.readData("Registerdetails", 1, 2);
+		String mobileno = excellibrary.readData("Registerdetails", 1, 3);
+		String feedback = excellibrary.readData("Registerdetails", 1, 5);
+
+		// Waiting Statement
 		javalibrary.pause(5000);
 
-		// Step1:Verify the Register Page
-		Assert.assertEquals("title", "title","Verified Register Page");
+		// Provide Implicitly Wait
+		webdriverlibrary.waitUntilElementFound();
 
-		// Step2:Verify The Element
-		Assert.assertEquals("element", "element","Verified Weblement");
+		String exptitle = "LearningSelenium";
+		String acttitle = webdriverlibrary.driver.getTitle();
+		System.out.println(acttitle);
+
+		// Step1:Verify the Register Page
+		Assert.assertEquals(exptitle, acttitle, "Verified Register Page");
 
 		// Create an Object For Register Page
 		RegisterPage regpage = new RegisterPage(webdriverlibrary.driver);
 
+		boolean elementExpCondition = true;
+		boolean elementActualCondition = regpage.getNametextfield().isDisplayed();
+
+		// Step2:Verify The Element
+		Assert.assertEquals(elementExpCondition, elementActualCondition,
+				"Verified NameTxtField Weblement -It Is Displayed");
+
 		// Step3:Perform Action--Clear
 		regpage.getNametextfield().clear();
-		
-		// Step4:Perform Action--Enter Email
-		regpage.getNametextfield().sendKeys("Admin123");
-	
+
+		// Step4:Perform Action--Enter Name
+		regpage.getNametextfield().sendKeys(name);
+
 		// Step5:Perform Action--Enter Email
-		regpage.getEmailtextfield().sendKeys("admin123@gmail.com");
+		regpage.getEmailtextfield().sendKeys(email);
 
 		// Step6:Perform Action--Enter Password
-		regpage.getPasswordtextfield().sendKeys("admin123@#");
+		regpage.getPasswordtextfield().sendKeys(Password);
 
 		// Step7:Perform Action--Enter MobileNo
-		regpage.getMobiletextfield().sendKeys("9876543210");
+		regpage.getMobiletextfield().sendKeys(mobileno);
+
+		// Step8:Perform Action--Enter Feedback
+		regpage.getFeedbacktextfield().sendKeys(feedback);
 
 		Reporter.log("Register With Valid Data Sucess", true);
 	}

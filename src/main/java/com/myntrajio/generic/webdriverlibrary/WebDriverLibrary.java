@@ -14,12 +14,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.myntrajio.generic.commonlibrary.FrameworkConstant;
+
 /***
  * This class contains reusable methods to perform driver related operations*
  * 
  * @author Harry
  */
-public class WebDriverLibrary {
+public class WebDriverLibrary implements FrameworkConstant {
 	public WebDriver driver;
 	public static WebDriver static_driver;
 	public Actions action;
@@ -73,8 +75,8 @@ public class WebDriverLibrary {
 	 * 
 	 * @param time
 	 */
-	public void waitUntilElementFound(long time) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
+	public void waitUntilElementFound() {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitduration));
 	}
 
 	/**

@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPage {
-	public RegisterPage(WebDriver driver) 
-	{
+	public RegisterPage(WebDriver driver) {
 		// Intialize the Page
 		PageFactory.initElements(driver, this);
 	}
@@ -20,6 +19,12 @@ public class RegisterPage {
 
 	@FindBy(id = "password")
 	private WebElement passwordtextfield;
+
+	@FindBy(id = "mobile")
+	private WebElement mobiletextfield;
+
+	@FindBy(id = "feedback")
+	private WebElement feedbacktextfield;
 
 	public WebElement getNametextfield() {
 		return nametextfield;
@@ -37,6 +42,7 @@ public class RegisterPage {
 		return mobiletextfield;
 	}
 
-	@FindBy(id = "mobile")
-	private WebElement mobiletextfield;
+	public WebElement getFeedbacktextfield() {
+		return feedbacktextfield;
+	}
 }

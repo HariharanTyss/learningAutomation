@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class BaseTest extends ObjectLibrary{
+public class BaseTest extends ObjectLibrary {
 
 	@BeforeMethod
 	public void login() {
@@ -24,9 +24,10 @@ public class BaseTest extends ObjectLibrary{
 
 	}
 
-	@Parameters("browser")
+	@Parameters({ "browser", "username" })
 	@BeforeClass
-	public void browserSetup(String bname) {
+	public void browserSetup(String bname, String username) {
+		System.out.println("Username:"+username);
 
 		// Create Object For All Library
 		createObject();
@@ -37,9 +38,9 @@ public class BaseTest extends ObjectLibrary{
 		// Fetch Url Data from property-File
 		String URL = propertyfilelibrary.readData("url");
 
-		//Step2:Maximize the Browser
+		// Step2:Maximize the Browser
 		webdriverlibrary.maximizeBrowser();
-		
+
 		// Step3:Navigate to the Application via URL
 		webdriverlibrary.navigateToApp(URL);
 
