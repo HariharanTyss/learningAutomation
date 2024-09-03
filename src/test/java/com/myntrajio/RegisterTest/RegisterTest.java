@@ -40,8 +40,7 @@ public class RegisterTest extends BaseTest {
 		boolean elementActualCondition = regpage.getNametextfield().isDisplayed();
 
 		// Step2:Verify The Element
-		Assert.assertEquals(elementExpCondition, elementActualCondition,
-				"Verified NameTxtField Weblement -It Is Displayed");
+		Assert.assertEquals(elementExpCondition, elementActualCondition,"Verified NameTxtField Weblement -It Is Displayed");
 
 		// Step3:Perform Action--Clear
 		regpage.getNametextfield().clear();
