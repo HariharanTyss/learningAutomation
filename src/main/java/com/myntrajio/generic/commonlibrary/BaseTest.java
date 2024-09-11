@@ -11,6 +11,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
 public class BaseTest extends ObjectLibrary {
 
 	@BeforeMethod
@@ -27,10 +32,9 @@ public class BaseTest extends ObjectLibrary {
 	@Parameters({ "browser", "username" })
 	@BeforeClass
 	public void browserSetup(String bname, String username) {
-		System.out.println("Username:"+username);
-
-		// Create Object For All Library
-		createObject();
+	
+		
+		System.out.println("Username:" + username);
 
 		// Step 1:Launch the Browser
 		webdriverlibrary.launchBrowser(bname);
@@ -57,19 +61,40 @@ public class BaseTest extends ObjectLibrary {
 
 	@BeforeTest
 	public void precondition() {
+		// Create Object For All Library
+		createObject();
+		
+		// Configure the SparkReport Information
+		spark.config().setDocumentTitle("Regresstion Testing For the RegisterPage");
+		spark.config().setReportName("RegresstionSuite");
+		spark.config().setTheme(Theme.DARK);
+
+		// Attach the Spark Report and ExtentReport
+		report.attachReporter(spark);
+
+		// Configure the System Information in Extent Report
+		report.setSystemInfo("DeviceName:", "Harry");
+		report.setSystemInfo("OperatingSystem:", "WINDOWS 11");
+		report.setSystemInfo("Browser:", "Chrome");
+		report.setSystemInfo("BrowserVersion:", "chrome-128.0.6613.85 ");
+
 		Reporter.log("precondition Done Sucessful", true);
 
 	}
 
 	@AfterTest
 	public void postcondition() {
+		// Flush the Report Information
+		report.flush();
 		Reporter.log("postcondition Done Sucessful", true);
 
 	}
 
 	@BeforeSuite
 	public void getSuiteConnections() {
-		Reporter.log("Get SuiteConnections Done Sucessful", true);
+
+			Reporter.log("Get SuiteConnections Done Sucessful", true);
+
 	}
 
 	@AfterSuite

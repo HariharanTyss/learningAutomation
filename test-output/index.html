@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-FunctionalityTestSuite" title="com.myntrajio.RegisterTest.RegisterTest" class="method navigator-link" hash-for-method="registerValidData">registerValidData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FunctionalityTestSuite" title="com.myntrajio.RegisterTest.RegisterTest" class="method navigator-link" hash-for-method="validateRegisterButtonColor">validateRegisterButtonColor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FunctionalityTestSuite" title="com.myntrajio.RegisterTest.RegisterTest" class="method navigator-link" hash-for-method="validateRegisterButtonPosition">validateRegisterButtonPosition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FunctionalityTestSuite" title="com.myntrajio.RegisterTest.RegisterTest" class="method navigator-link" hash-for-method="validateRegisterButtonSize">validateRegisterButtonSize</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FunctionalityTestSuite -->
@@ -129,6 +144,27 @@
                   <a name="registerValidData">
                   </a> <!-- registerValidData -->
                   <span class="method-name">registerValidData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateRegisterButtonColor">
+                  </a> <!-- validateRegisterButtonColor -->
+                  <span class="method-name">validateRegisterButtonColor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateRegisterButtonPosition">
+                  </a> <!-- validateRegisterButtonPosition -->
+                  <span class="method-name">validateRegisterButtonPosition</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateRegisterButtonSize">
+                  </a> <!-- validateRegisterButtonSize -->
+                  <span class="method-name">validateRegisterButtonSize</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,11 +223,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registerValidData')
 data.setCell(0, 2, 'com.myntrajio.RegisterTest.RegisterTest')
-data.setCell(0, 3, 10450);
+data.setCell(0, 3, 10067);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validateRegisterButtonColor')
+data.setCell(1, 2, 'com.myntrajio.RegisterTest.RegisterTest')
+data.setCell(1, 3, 5);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateRegisterButtonSize')
+data.setCell(2, 2, 'com.myntrajio.RegisterTest.RegisterTest')
+data.setCell(2, 3, 3);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateRegisterButtonPosition')
+data.setCell(3, 2, 'com.myntrajio.RegisterTest.RegisterTest')
+data.setCell(3, 3, 3);
 window.suiteTableData['FunctionalityTestSuite']= { tableData: data, tableDiv: 'times-div-FunctionalityTestSuite'}
 return data;
 }
@@ -211,6 +259,24 @@ return data;
               <span class="reporter-method-name">registerValidData</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Register With Valid Data Sucess</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateRegisterButtonColor</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">RegisterButtonColor Validated </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateRegisterButtonSize</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">RegisterButtonSize Validated </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateRegisterButtonPosition</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">RegisterButtonPositionValidated </span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,35 +301,71 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">precondition</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-start">34 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">browserSetup(chrome, Harry)</span>
-                <span class="method-start">72 ms</span>
+                <span class="method-start">805 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">3953 ms</span>
+                <span class="method-start">4574 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registerValidData</span>
-                <span class="method-start">3957 ms</span>
+                <span class="method-start">4578 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Logout</span>
-                <span class="method-start">14414 ms</span>
+                <span class="method-start">14651 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">14654 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateRegisterButtonColor</span>
+                <span class="method-start">14655 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Logout</span>
+                <span class="method-start">14662 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">14665 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateRegisterButtonPosition</span>
+                <span class="method-start">14666 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Logout</span>
+                <span class="method-start">14672 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">14675 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateRegisterButtonSize</span>
+                <span class="method-start">14677 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Logout</span>
+                <span class="method-start">14682 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">14417 ms</span>
+                <span class="method-start">14684 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">postcondition</span>
-                <span class="method-start">14633 ms</span>
+                <span class="method-start">14981 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">terminateSuiteconnection</span>
-                <span class="method-start">14731 ms</span>
+                <span class="method-start">16250 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

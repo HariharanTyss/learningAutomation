@@ -3,20 +3,47 @@
 <suite name="Failed suite [FunctionalityTestSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="Harry"/>
     <classes>
-      <class name="com.myntrajio.RegisterTest.RegisterTest">
+      <class name="com.myntrajio.RegisterTest.RegisterValidate3Test">
+        <methods>
+          <include name="validateRegisterButton"/>
+          <include name="browserSetup"/>
+          <include name="terminateSuiteconnection"/>
+          <include name="Logout"/>
+          <include name="getSuiteConnections"/>
+          <include name="login"/>
+          <include name="closebrowser"/>
+          <include name="precondition"/>
+          <include name="postcondition"/>
+        </methods>
+      </class> <!-- com.myntrajio.RegisterTest.RegisterValidate3Test -->
+      <class name="com.myntrajio.RegisterTest.RegisterValidate4Test">
         <methods>
           <include name="browserSetup"/>
           <include name="terminateSuiteconnection"/>
-          <include name="registerValidData"/>
+          <include name="validateRegisterButton"/>
           <include name="Logout"/>
           <include name="getSuiteConnections"/>
-          <include name="closebrowser"/>
           <include name="login"/>
+          <include name="closebrowser"/>
           <include name="postcondition"/>
           <include name="precondition"/>
         </methods>
-      </class> <!-- com.myntrajio.RegisterTest.RegisterTest -->
+      </class> <!-- com.myntrajio.RegisterTest.RegisterValidate4Test -->
+      <class name="com.myntrajio.RegisterTest.RegisterValidate2Test">
+        <methods>
+          <include name="browserSetup"/>
+          <include name="terminateSuiteconnection"/>
+          <include name="validateRegisterButton"/>
+          <include name="Logout"/>
+          <include name="getSuiteConnections"/>
+          <include name="login"/>
+          <include name="closebrowser"/>
+          <include name="precondition"/>
+          <include name="postcondition"/>
+        </methods>
+      </class> <!-- com.myntrajio.RegisterTest.RegisterValidate2Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [FunctionalityTestSuite] -->

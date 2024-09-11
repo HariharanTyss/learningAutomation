@@ -7,7 +7,7 @@
 		<classes>
 			<class name="com.myntrajio.RegisterTest.RegisterTest" />
 		</classes>
-	</test> <!--  b                                                                                                                                                                                                              
+	</test> <!--                                                                                                                                                                                                              
 	Test -->
 </suite> <!--
 FunctionalityTestSuite -->
